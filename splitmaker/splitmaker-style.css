@@ -1,0 +1,168 @@
+body{
+    background-color: rgb(56, 64, 71);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    overflow-wrap: anywhere;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#splitmakerLogo{
+    width: 20rem;
+    border: 5px solid black;
+    border-radius: 40px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.center{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#title{
+
+    font-size: 3rem;
+}
+
+
+.livesplitUpload{
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.livesplitUpload input{
+    font-size: 1.1rem;
+    width: 12%;
+    margin-top: 15px;
+}
+
+
+#timeFormatSelection{
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+#RTA{
+    margin-right: 30px;
+}
+
+
+.comparisonTime{
+    margin-top: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.comparisonTime input{
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+
+#advancedSettings{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#advancedSettings p{
+    font-size: 1.15rem;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+#advancedSettings input{
+    font-size: 1.3rem;
+    width: 100px;
+    text-align: center;
+    margin-top: 15px;
+}
+#segmentsForAverage{
+    margin-top: 15px;
+}
+#outlierThreshold{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+
+#errorMessage{
+    color: rgb(245, 81, 81);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+}
+th{
+    padding: 20px;
+}
+td{
+    padding: 6px;
+    border-bottom: solid 1px white;
+}
+
+button{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(185, 0, 158);
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+button:hover{
+    background-color: rgb(158, 0, 134);
+}
+button:active{
+    background-color: rgb(122, 0, 104);
+}
+
+
+dialog .wrapper{
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+dialog{
+    /* remove scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    border: 5px solid rgb(20, 3, 45);
+    background-color: rgb(47, 3, 77);
+}
+/* remove scrollbar */
+dialog::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    color: rgb(255, 0, 216);
+    font-weight: bold;
+}
+a:hover{
+    color: rgb(182, 0, 155);
+}
+a:active{
+    color: rgb(150, 0, 127);
+}

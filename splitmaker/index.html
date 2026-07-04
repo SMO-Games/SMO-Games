@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Splitmaker</title>
+    <link rel="stylesheet" href="splitmaker-style.css">
+    <link rel="icon" type="image/x-icon" href="splitmaker_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <img src="splitmaker_logo.png" id="splitmakerLogo">
+    <h4 class="center">Made by <a href="https://twitch.tv/tryxdc">tryxdc</a></h4>
+
+    <button id="homeBtn" onclick="location.href='../'" class="center">Home</button>
+
+    <br>
+
+    <div class="center livesplitUpload">  
+        <label for="livesplitUploadBtn">Upload Livesplit File</label>
+        <br>
+        <input type="file" id="livesplitUploadBtn" name="livesplitUploadBtn" accept=".lss">
+    </div>
+    
+    <br>
+
+    <div class="center" id="timeFormatSelection">
+        <label for="RTA">RTA</label>
+        <input type="radio" id="RTA" name="TimeFormat" value="RealTime" checked>
+
+        <label for="IGT">IGT</label>
+        <input type="radio" id="IGT" name="TimeFormat" value="GameTime">
+    </div>
+
+    <br>
+
+    <div class="center comparisonTime">
+        <label for="comparisonTimeInput">Comparison Final Time</label>
+        <br>
+        <input type="text" id="comparisonTimeInput" name="comparisonTimeInput" placeholder="[HH:]MM:SS[.MS]">
+    </div>
+
+    <br>
+
+    <button class="center" id="advancedSettingsBtn" onclick=toggleAdvancedSettings()>Advanced Settings</button>
+    <br>
+    <div id="advancedSettings" class="center" style="display:none">
+        <div id="segmentsForAverage">
+            <label for="segmentsForAverageInput">Segments Used for Average</label>
+            <br>
+            <input type="text" id="segmentsForAverageInput" name="segmentsForAverageInput" placeholder="e.g. 10" value="10">
+            <br>
+            <p>This determines how many latest segments are used to calculate your average difference to Gold in each split.<br>
+                For example, if it is set to 10, then the 10 most recent completions of a split are used to find the average difference.
+            </p>
+        </div>
+
+        <br>
+
+        <div id="outlierThreshold">
+            <label for="outlierThresholdInput">Outlier Threshold (%)</label>
+            <br>
+            <input type="text" id="outlierThresholdInput" name="outlierThresholdInput" placeholder="e.g. 50" value="50">
+            <br>
+            <p>This determines how far off Gold a segment time can be before being excluded from your average.<br>
+                For example, if it is set to 50%, then with a Gold of 2:00, all times above 3:00 will be excluded from your average.<br>
+                This is because 3:00 is 50% above 2:00.<br><br>
+                This also helps remove issues with skipped splits, as Livesplit merges the times into one and damages the average.</p>
+        </div>
+    </div>
+
+    <br>
+
+    <button class="center" id="createComparisonBtn" onclick=generateComparison()>Create Comparison</button>
+
+    <p id="errorMessage" class="center"></p>
+
+    <br><br><br>
+
+    <div id="comparisonResult" style="display:none">
+        <table class="center">
+            <tbody id="splitsTable"></tbody>
+        </table>
+
+        <br><br>
+
+        <button class="center" id="copyComparisonBtn" onclick=copyComparison()>Copy Comparison</button>
+
+        <p class="center" style="font-size:1.2rem;margin-top:20px;margin-bottom:100px">
+            Click on the first split of a new, empty comparison.
+            <br>
+            Then, Ctrl + V to paste this comparison in.
+        </p>
+    </div>
+    
+
+    <script src="splitmaker.js"></script>
+</body>
+</html>
