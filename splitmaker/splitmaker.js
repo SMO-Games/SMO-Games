@@ -1,4 +1,5 @@
 const createComparisonBtn = document.getElementById("createComparisonBtn");
+const toggleExitsBtn = document.getElementById("toggleExitsBtn");
 const comparisonResult = document.getElementById("comparisonResult");
 const livesplitFile = document.getElementById("livesplitUploadBtn");
 const compTimeInput = document.getElementById("comparisonTimeInput");
@@ -7,7 +8,8 @@ const advancedSettings = document.getElementById("advancedSettings");
 const errorMessage = document.getElementById("errorMessage");
 const copyText = document.getElementById("copyText");
 
-const datapoints = ["name", "pbSegmentTime", "compSegmentTime", "gold"];
+const segmentDatapoints = ["name", "pbSegmentTime", "compSegmentTime", "gold"];
+const exitDatapoints = ["name", "pbExitTime", "compExitTime", "goldExitTime"];
 
 let splits;
 let attempts;
@@ -21,6 +23,8 @@ const timeFormatInput = document.getElementById("outlierThresholdInput");
 let segmentsForAverage = 10;
 let outlierThreshold = 0.5;
 let timeFormat = "RealTime";
+
+let exitsToggled = false;
 
 
 // read uploaded file
@@ -41,7 +45,7 @@ function handleFileSelection(event) {
 
 
 function displayError(message){
-    errorMessage.innerText = message;
+    errorMessage.textContent = message;
     comparisonResult.style.display = "none"; // hide table
 }
 
@@ -102,7 +106,7 @@ function formatTime(seconds){
 
 
 // prepares table for new comparison
-function resetTable(){
+function resetTable(columnLabel){
     splitsTable.replaceChildren(); // remove all existing content
 
     newRow = document.createElement("tr"); // create headings row
@@ -112,13 +116,13 @@ function resetTable(){
     names.textContent = "Split Name";
 
     pbSegments = document.createElement("th");
-    pbSegments.textContent = "PB Segment";
+    pbSegments.textContent = `PB ${columnLabel}`;
 
     compSegments = document.createElement("th");
-    compSegments.textContent = "Comp Segment";
+    compSegments.textContent = `Comp ${columnLabel}`;
 
     goldSegments = document.createElement("th");
-    goldSegments.textContent = "Gold Segment";
+    goldSegments.textContent = `Gold ${columnLabel}`;
 
     // add all to table
     splitsTable.append(newRow);
@@ -139,13 +143,39 @@ function toggleAdvancedSettings(){
 }
 
 
+// generates table from segments
+function buildTable(datapoints){
+    for(let segment of allSegments){
+        
+        let newRow = document.createElement("tr");
+
+        for(let datapoint of datapoints){ // array of all columns
+            let newTD = document.createElement("td");
+
+            // format text if needed, if NaN then set to skipped as time has not been found
+            let newTDText = formatTime(segment[datapoint]);
+            if(Number.isNaN(newTDText)){
+                newTD.textContent = "Skipped";
+            }
+            else{
+                newTD.textContent = newTDText;
+            }
+            
+            newRow.append(newTD);
+        }
+        splitsTable.append(newRow);
+    }
+    comparisonResult.style.display = "block"; // reveal table
+}
+
+
 // on button click
 function generateComparison(){
 
     // prepare for new comparison
-    resetTable();
-    handleFileSelection(null);
-    errorMessage.innerText = "" // remove error text
+    resetTable("Segment");
+    handleFileSelection(null); // load in file
+    errorMessage.textContent = ""; // remove error text
 
     // get settings
     timeFormat = document.querySelector('input[type=radio][name=TimeFormat]:checked').value;
@@ -192,7 +222,10 @@ function generateComparison(){
                 "gold": timeToSeconds(segment.querySelector("BestSegmentTime").querySelector(timeFormat).textContent),
                 "averageTimeOffGold": undefined,
                 "pbSegmentTime": pbTime,
-                "compSegmentTime": undefined
+                "compSegmentTime": undefined,
+                "pbExitTime": pbTime,
+                "compExitTime": undefined,
+                "goldExitTime": undefined
             };
             
             currentSegmentTimes = segment.querySelector("SegmentHistory").querySelectorAll("Time"); // grabs all time elements for current segment
@@ -232,14 +265,18 @@ function generateComparison(){
     }
 
 
-    // get total expected time off golds, the sob, and correct pb segment time to SEGMENT not exit
+    // get total expected time off golds, the sob, and correct pb segment time to SEGMENT not exit, and exits
     let totalAvgTimeOffGold = 0;
     let sumOfBest = 0;
+    let compExitTime = 0;
+    let goldExitTime = 0;
     let previousExitTime = [0, 0];
     for(let segment of allSegments){
+        // manage golds
         totalAvgTimeOffGold += segment.averageTimeOffGold;
         sumOfBest += segment.gold;
 
+        // correct pb time
         previousExitTime[0] = segment.pbSegmentTime; // store current exit time
         segment.pbSegmentTime -= previousExitTime[1]; // subtract using previous exit time
         previousExitTime[1] = previousExitTime[0]; // update exit time to be subtracted next
@@ -252,45 +289,43 @@ function generateComparison(){
     }
     
     // sets comp time of each segment by proportion
+    // and gets exit times
     let compTimeOffSob = compTime - sumOfBest;
     let proportionOffSob = compTimeOffSob / totalAvgTimeOffGold;
     for(let segment of allSegments){
         segment.compSegmentTime = segment.gold + (segment.averageTimeOffGold * proportionOffSob);
+
+        // get split exit times
+        // comp
+        console.log(segment.compSegmentTime);
+        compExitTime += segment.compSegmentTime;
+        segment.compExitTime = compExitTime;
+        // gold
+        goldExitTime += segment.gold;
+        segment.goldExitTime = goldExitTime;
     }
     
-    // build table
-    for(let segment of allSegments){
-        
-        let newRow = document.createElement("tr");
-
-        for(let datapoint of datapoints){
-            let newTD = document.createElement("td");
-
-            // format text if needed, if NaN then set to skipped as time has not been found
-            let newTDText = formatTime(segment[datapoint]);
-            if(Number.isNaN(newTDText)){
-                newTD.textContent = "Skipped";
-            }
-            else{
-                newTD.textContent = newTDText;
-            }
-            
-            newRow.append(newTD);
-        }
-        splitsTable.append(newRow);
-    }
-    comparisonResult.style.display = "block"; // reveal table
+    // create segments table
+    toggleExitsBtn.textContent = "Show Exits";
+    exitsToggled = false;
+    buildTable(segmentDatapoints);
 }
 
 
-function copyComparison(){
+function createExitsArray(datapoint){
     // create array of every exit time
     let currentExitTime = 0;
     let exitTimes = [];
     for(let segment of allSegments){
-        currentExitTime += segment.compSegmentTime;
+        currentExitTime += segment[datapoint];
         exitTimes.push(formatTime(currentExitTime));
     }
+    return exitTimes
+}
+
+
+function copyComparison(){
+    exitTimes = createExitsArray("compSegmentTime");
 
     // build array into formatted string for livesplit
     let formattedComparison = "";
@@ -303,4 +338,21 @@ function copyComparison(){
     // confirm copy
     copyText.style.display = "block";
     setTimeout(() => {copyText.style.display = "none";}, 2000) // remove copy confirmed text after 2 seconds
+}
+
+
+function toggleExits(){
+    // change button text and load appropriate table
+    if(!exitsToggled){
+        toggleExitsBtn.textContent = "Show Segments";
+        resetTable("Exit"); // prepare for new table
+        buildTable(exitDatapoints);
+        exitsToggled = true;
+    }
+    else{
+        toggleExitsBtn.textContent = "Show Exits";
+        resetTable("Segment"); // prepare for new table
+        buildTable(segmentDatapoints);
+        exitsToggled = false;
+    }
 }
