@@ -3,13 +3,15 @@ const comparisonResult = document.getElementById("comparisonResult");
 const livesplitFile = document.getElementById("livesplitUploadBtn");
 const compTimeInput = document.getElementById("comparisonTimeInput");
 const splitsTable = document.getElementById("splitsTable");
-const datapoints = ["name", "pbSegmentTime", "compSegmentTime"];
 const advancedSettings = document.getElementById("advancedSettings");
 const errorMessage = document.getElementById("errorMessage");
+const copyText = document.getElementById("copyText");
+
+const datapoints = ["name", "pbSegmentTime", "compSegmentTime", "gold"];
 
 let splits;
 let attempts;
-let compTime = 3419.999;
+let compTime;
 let segmentArray;
 
 // settings
@@ -38,6 +40,12 @@ function handleFileSelection(event) {
 }
 
 
+function displayError(message){
+    errorMessage.innerText = message;
+    comparisonResult.style.display = "none"; // hide table
+}
+
+
 // converts HH:MM:SS.MSMSMS to seconds
 function timeToSeconds(time){
     let individualTimes = time.split(":");
@@ -57,9 +65,11 @@ function timeToSeconds(time){
 
         totalTime = (minutes*60) + seconds;
     }
-    // if invalid time
+    // if only up to seconds
     else{
-        return false
+        let seconds = Number(individualTimes[0]);
+
+        totalTime = seconds;
     }
     
     return totalTime
@@ -68,13 +78,8 @@ function timeToSeconds(time){
 function formatTime(seconds){
     try{
 
-        // if no decimals, add a second because idk it's bugged and this is an easy fix lol
-        if(seconds % 1 == 0){
-            seconds += 1;
-        }
-
         if(seconds >= 3600){ // if has hours
-            timeString = new Date(seconds * 1000).toISOString().substring(11, 16);
+            timeString = new Date(seconds * 1000).toISOString().substring(11, 19);
         }
         else{
             timeString = new Date(seconds * 1000).toISOString().substring(14, 19);
@@ -112,11 +117,15 @@ function resetTable(){
     compSegments = document.createElement("th");
     compSegments.textContent = "Comp Segment";
 
+    goldSegments = document.createElement("th");
+    goldSegments.textContent = "Gold Segment";
+
     // add all to table
     splitsTable.append(newRow);
     newRow.append(names);
     newRow.append(pbSegments);
     newRow.append(compSegments);
+    newRow.append(goldSegments);
 }
 
 
@@ -146,23 +155,24 @@ function generateComparison(){
     // validate settings
     // if either not a number
     if(isNaN(segmentsForAverage) || isNaN(outlierThreshold)){
-        errorMessage.innerText = "Your settings are not valid!"
-        comparisonResult.style.display = "none"; // hide table
+        displayError("Your settings are not valid!")
         return
     }
+    // if too few segments
     if(segmentsForAverage < 1){
-        errorMessage.innerText = "Segments Used for Average must be at least 1!"
-        comparisonResult.style.display = "none"; // hide table
+        displayError("Segments Used for Average must be at least 1!")
         return
     }
     
-
     // get desired comp time in seconds
     compTime = timeToSeconds(compTimeInput.value);
+    if(isNaN(compTime)){
+        displayError("Your comparison time is invalid!");
+        return
+    }
 
     // initialise splits file
     splits = new DOMParser().parseFromString(splits, "text/xml");
-    console.log(splits);
     segments = splits.querySelector("Segments").querySelectorAll("Segment"); // all segments
     allSegments = [];
 
@@ -172,10 +182,9 @@ function generateComparison(){
 
             // try to get pb segment time, default to "Skipped" if not available
             let pbTime = "Skipped";
-            console.log(segment);
             if(segment.querySelector("SplitTimes").querySelector('SplitTime[name="Personal Best"]').querySelector(timeFormat)){
                 pbTime = timeToSeconds(segment.querySelector("SplitTimes").querySelector('SplitTime[name="Personal Best"]').querySelector(timeFormat).textContent);
-            }
+            };
 
             // creates dictionary for current segment
             currentSegment = {
@@ -184,7 +193,7 @@ function generateComparison(){
                 "averageTimeOffGold": undefined,
                 "pbSegmentTime": pbTime,
                 "compSegmentTime": undefined
-            }
+            };
             
             currentSegmentTimes = segment.querySelector("SegmentHistory").querySelectorAll("Time"); // grabs all time elements for current segment
             
@@ -235,6 +244,12 @@ function generateComparison(){
         segment.pbSegmentTime -= previousExitTime[1]; // subtract using previous exit time
         previousExitTime[1] = previousExitTime[0]; // update exit time to be subtracted next
     }
+
+    // if comp time is too fast, end
+    if(compTime < sumOfBest){
+        displayError("Your comparison time is faster than your Sum of Best!");
+        return
+    }
     
     // sets comp time of each segment by proportion
     let compTimeOffSob = compTime - sumOfBest;
@@ -260,15 +275,11 @@ function generateComparison(){
                 newTD.textContent = newTDText;
             }
             
-
             newRow.append(newTD);
         }
-
         splitsTable.append(newRow);
     }
-
     comparisonResult.style.display = "block"; // reveal table
-
 }
 
 
@@ -289,4 +300,7 @@ function copyComparison(){
 
     // copy text to clipboard
     navigator.clipboard.writeText(formattedComparison);
+    // confirm copy
+    copyText.style.display = "block";
+    setTimeout(() => {copyText.style.display = "none";}, 2000) // remove copy confirmed text after 2 seconds
 }
