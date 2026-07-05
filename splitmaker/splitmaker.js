@@ -200,6 +200,7 @@ function generateComparison(){
         displayError("Your comparison time is invalid!");
         return
     }
+    console.log(compTime);
 
     // initialise splits file
     splits = new DOMParser().parseFromString(splits, "text/xml");
@@ -297,7 +298,6 @@ function generateComparison(){
 
         // get split exit times
         // comp
-        console.log(segment.compSegmentTime);
         compExitTime += segment.compSegmentTime;
         segment.compExitTime = compExitTime;
         // gold
@@ -330,7 +330,12 @@ function copyComparison(){
     // build array into formatted string for livesplit
     let formattedComparison = "";
     for(let exit in exitTimes){
-        formattedComparison += (`${exitTimes[exit]}\n`);
+        if(exitTimes[exit] == exitTimes[exitTimes.length - 1]){
+            formattedComparison += `${formatTime(compTime)}`;
+        }
+        else{
+            formattedComparison += `${exitTimes[exit]}\n`;
+        }
     }
 
     // copy text to clipboard
