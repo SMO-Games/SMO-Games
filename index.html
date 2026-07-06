@@ -18,59 +18,59 @@
 
     <br>
 
-    <div id="gameList" class="center">
-        <div id="guessTheRunnerBox">
-            <a href="/guess-the-runner/"><img src="/guess-the-runner/guessthesmorunner.png" alt="Guess the SMO Runner" id="guessTheRunnerLogo"></a>
-            <h2 onclick="location.href='/guess-the-runner/'"><mark>Guess the SMO Runner</mark></h2>
-        </div>
+    <div class="container center">
+        <div class="games">
 
-        <div id="higherOrLowerBox">
-            <a href="/higher-or-lower/"><img src="higher_or_lower_logo.png" alt="Higher or Lower" id="higherOrLowerLogo" class="gameLogo"></a>
-            <h2 onclick="location.href='/higher-or-lower/'"><mark>Higher or Lower</mark></h2>
-        </div>
+            <div class="groupTitle">
+                <h1><mark>Games</mark></h1>
+            </div>
+            
+            <div id="guessTheRunnerBox" class="gameBox">
+                <a href="/guess-the-runner/"><img src="guess_the_runner_homepage_logo.png" alt="Guess the SMO Runner" class="gameLogo"></a>
+                <h2 onclick="location.href='/guess-the-runner/'"><mark>Guess the SMO Runner</mark></h2>
+            </div>
 
-        <div id="trickjumpGeneratorBox">
-            <a href="/trickjump-generator/"><img src="trickjump-generator/trickjump_generator_logo.png" alt="Trickjump Generator" id="trickjumpGeneratorLogo" class="gameLogo"></a>
-            <h2 onclick="location.href='/trickjump-generator/'"><mark>Trickjump Generator</mark></h2>
+            <div id="higherOrLowerBox" class="gameBox">
+                <a href="/higher-or-lower/"><img src="higher_or_lower_logo.png" alt="Higher or Lower" id="higherOrLowerLogo" class="gameLogo"></a>
+                <h2 onclick="location.href='/higher-or-lower/'"><mark>Higher or Lower</mark></h2>
+            </div>
+
+            <div id="trickjumpGeneratorBox" class="gameBox">
+                <a href="/trickjump-generator/"><img src="trickjump-generator/trickjump_generator_logo.png" alt="Trickjump Generator" id="trickjumpGeneratorLogo" class="gameLogo"></a>
+                <h2 onclick="location.href='/trickjump-generator/'"><mark>Trickjump Generator</mark></h2>
+            </div>
         </div>
         
-    </div>
+        <div class="tools">
 
-    <br><br>
+            <div class="groupTitle">
+                <h1><mark>Tools</mark></h1>
+            </div>
 
-    <div id="tools">
-        <div id="toolsTitle" class="center">
-            <h1><mark>Tools</mark></h1>
-        </div>
-
-        <div id="toolList" class="center">
-            <div id="tutorialsBox">
+            <div id="tutorialsBox" class="toolBox">
                 <a href="/tutorials/"><img src="/tutorials/tutorial_centre_logo.png" alt="Tutorial Centre" class="gameLogo"></a>
                 <h2 onclick="location.href='/tutorials/'"><mark>Tutorial Centre</mark></h2>
             </div>
-            
-            <br>
 
-            <div id="splitmakerBox">
-                <a href="/splitmaker/"><img src="splitmaker_homepage_logo.png" alt="Splitmaker" class="gameLogo"></a>
-                <h2 onclick="location.href='/splitmaker/'"><mark>Splitmaker</mark></h2>
+            <div id="splitmakerBox" class="toolBox">
+                    <a href="/splitmaker/"><img src="splitmaker_homepage_logo.png" alt="Splitmaker" class="gameLogo"></a>
+                    <h2 onclick="location.href='/splitmaker/'"><mark>Splitmaker</mark></h2>
             </div>
 
-            <br>
-
-            <div id="dstaBox">
-                <a href="/dsta-calculator/"><img src="/dsta-calculator/dsta_calculator_logo.png" alt="DSTA Offset Calculator" class="gameLogo"></a>
-                <h2 onclick="location.href='/dsta-calculator/'"><mark>DSTA Offset Calculator</mark></h2>
+            <div id="dstaBox" class="toolBox">
+                    <a href="/dsta-calculator/"><img src="/dsta-calculator/dsta_calculator_logo.png" alt="DSTA Offset Calculator" class="gameLogo"></a>
+                    <h2 onclick="location.href='/dsta-calculator/'"><mark>DSTA Offset Calculator</mark></h2>
             </div>
         </div>
     </div>
-    
-    <br><br><br><br><br>
 
     <dialog id="xDialogue">
         <div class="xWrapper wrapper">
         </div>
     </dialog>
+
+    
+    <br id="bottomSpace">
 
 
     <script src="homepage.js"></script>

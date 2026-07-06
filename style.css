@@ -20,58 +20,43 @@ body{
     display: block;
 }
 
+
+.container {
+    display: flex;
+    margin-bottom: 70px;
+}
+.container .gameBox {
+    padding: 10px;
+    padding-bottom: 75px;
+    height: 200px;
+}
+.container .toolBox{
+    padding: 10px;
+    padding-bottom: 75px;
+    height: 200px;
+}
+
+.groupTitle{
+    font-size: 1.25rem;
+}
+
+
+.games{
+    flex: 1;
+}
+.tools{
+    flex: 1;
+}
+
 #title{
     color: white;
 }
+
 
 h2{
     color: white;
     cursor: pointer;
 }
-
-#guessTheRunnerBox{
-    margin-top: 30px;
-}
-#higherOrLowerBox{
-    margin-top: 50px;
-}
-#trickjumpGeneratorBox{
-    margin-top: 50px;
-}
-#tutorialsBox{
-    margin-top: 20px;
-}
-
-#guessTheRunnerLogo{
-    background-color: rgba(0, 0, 0, 0.637);
-    border: black solid 5px;
-    border-radius: 30px;
-    padding: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 16rem;
-    margin-top: 5px;
-    cursor: pointer;
-    animation: unhoverGTRImg 150ms forwards;
-}
-#guessTheRunnerLogo:hover{
-    animation: hoverGTRImg 150ms forwards;
-}
-
-@keyframes hoverGTRImg{
-    100%{
-        width: 16.65rem;
-    }
-}
-@keyframes unhoverGTRImg{
-    0%{
-        width: 16.65rem;
-    }
-    100%{
-        width: 16rem;
-    }
-}
-
 
 .gameLogo{
     border-radius: 30px;
@@ -86,6 +71,53 @@ h2{
 .gameLogo:hover{
     animation: hoverImg 150ms forwards;
 }
+
+
+.gameBox{
+    margin-top: 20px;
+}
+.toolBox{
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 900px){
+    .container {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .groupTitleContainer{
+        flex-direction: column;
+    }
+    .gameLogo {
+        width: 18rem;
+        height: 9rem;
+        animation: unhoverImgSmall 150ms forwards;
+    }
+    .gameLogo:hover{
+        animation: hoverImgSmall 150ms forwards;
+    }
+}
+
+
+@keyframes hoverImgSmall{
+    100%{
+        width: 18.75rem;
+        height: 9.375rem;
+    }
+}
+@keyframes unhoverImgSmall{
+    0%{
+        width: 18.75rem;
+        height: 9.375rem;
+    }
+    100%{
+        width: 18rem;
+        height: 9rem;
+    }
+}
+
 
 @keyframes hoverImg{
     100%{
@@ -142,119 +174,6 @@ mark{
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-@keyframes correctAnswer{
-    100%{
-        border: 10px rgb(36, 201, 14) solid;
-        background-color: rgba(12, 65, 5, 0.8);
-    }
-}
-@keyframes incorrectAnswer{
-    100%{
-        border: 10px rgb(255, 0, 0) solid;
-        background-color: rgba(58, 0, 0, 0.8);
-    }
-}
-
-@keyframes dimImage{
-    0%{
-        background-color: rgba(0, 0, 0, 0);
-    }
-    100%{
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-}
-@keyframes undimImage{
-    0%{
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-    100%{
-        background-color: rgba(0, 0, 0, 0);
-    }
-}
-
-@keyframes slide-up{
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-@keyframes fade-in{
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes fade-out{
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@keyframes green-text{
-    100% {
-        color:rgb(36, 201, 14);
-    }
-}
-
-.slide-up-class{
-    animation: slide-up 400ms forwards;
-}
-.fade-in-class{
-    animation: fade-in 400ms forwards;
-}
-.fade-out-class{
-    animation: fade-out 400ms forwards;
-}
-.green-text-class{
-    animation: green-text 400ms forwards;
-}
-
-
-/* game over dialogue styling */
-#gameOverDialogue{
-    padding: 0;
-    color: white;
-}
-#gameOverDialogue[open]{
-    animation: slide-up 500ms forwards;
-}
-#gameOverDialogue[open]::backdrop{
-    animation: fade-in 500ms forwards;
-}
-#gameOverDialogue h1{
-    color: rgb(6, 219, 219);
-}
-#gameOverDialogue p{
-    color: yellow;
-}
-
-
-/*formatting for all dialogues and exit button*/
-#exitDialogue{
-    font-weight: bold;
-    font-size: 2.5rem;
-    position: absolute;
-    right: -10px;
-    top: 2px;
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-    border-style: none;
-}
-#exitDialogue:hover{
-    color: rgb(204, 204, 204);
-}
-#exitDialogue:active{
-    color: rgb(184, 184, 184);
 }
 
 dialog .wrapper{
