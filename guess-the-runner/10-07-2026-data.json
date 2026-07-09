@@ -1639,7 +1639,7 @@
       "w20w1lzd"
     ],
     "best_ce_placement": [
-      61,
+      62,
       "7kjp3wzk"
     ],
     "most_recent_run": "2021-05-21",
@@ -2564,7 +2564,7 @@
       "vdooo3yd"
     ],
     "best_ce_placement": [
-      68,
+      69,
       "zd37rjy2"
     ],
     "most_recent_run": "2023-03-05",
@@ -3039,10 +3039,10 @@
       "wk6719ed"
     ],
     "best_ce_placement": [
-      57,
+      58,
       "7kjp3wzk"
     ],
-    "most_recent_run": "2024-06-24",
+    "most_recent_run": "2026-05-07",
     "twitch_handle": "black_screen23",
     "twitter_handle": "BScreen23",
     "profile_picture": "https://www.speedrun.com/static/user/8gemgl7j/image?v=810434e",
@@ -3100,6 +3100,31 @@
     "console": "Switch 1"
   },
   {
+    "name": "vCheriba",
+    "id": "y8dprrl8",
+    "country": [
+      "de",
+      "Germany",
+      "DE",
+      "EU"
+    ],
+    "name_colour": "#6666EE",
+    "best_mb_placement": [
+      123,
+      "w20w1lzd"
+    ],
+    "best_ce_placement": [
+      134,
+      "7kjp3wzk"
+    ],
+    "most_recent_run": "2026-05-31",
+    "twitch_handle": "vCheriba",
+    "twitter_handle": null,
+    "profile_picture": "https://www.speedrun.com/static/user/y8dprrl8/image?v=62cb229",
+    "pb": 3598,
+    "console": "Switch 2"
+  },
+  {
     "name": "Nicro",
     "id": "kj95m2n8",
     "country": [
@@ -3135,7 +3160,7 @@
     ],
     "name_colour": "#A010A0",
     "best_mb_placement": [
-      125,
+      126,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -3273,31 +3298,6 @@
     "profile_picture": "https://www.speedrun.com/static/user/jp4nz35j/image?v=8717775",
     "pb": 3606,
     "console": "Switch 1"
-  },
-  {
-    "name": "vCheriba",
-    "id": "y8dprrl8",
-    "country": [
-      "de",
-      "Germany",
-      "DE",
-      "EU"
-    ],
-    "name_colour": "#6666EE",
-    "best_mb_placement": [
-      132,
-      "w20w1lzd"
-    ],
-    "best_ce_placement": [
-      134,
-      "7kjp3wzk"
-    ],
-    "most_recent_run": "2025-11-14",
-    "twitch_handle": "vCheriba",
-    "twitter_handle": null,
-    "profile_picture": "https://www.speedrun.com/static/user/y8dprrl8/image?v=62cb229",
-    "pb": 3609,
-    "console": "Switch 2"
   },
   {
     "name": "shobo",
