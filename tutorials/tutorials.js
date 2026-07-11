@@ -152,6 +152,7 @@ const trickTutorials = [
     ['3DSS', 'https://www.youtube.com/watch?v=lJCGhdmkYPQ', 'Dark Side', [], ''],
     ['Dark Side Mech', 'https://www.youtube.com/watch?v=KoT5_zU3Qkc', 'Dark Side', [], ''],
     // darker
+    ['Glydon Skip', 'https://www.youtube.com/watch?v=wGHxiaAhixo', 'Darker Side', [], ''],
     ['Darker FRS', 'https://www.youtube.com/watch?v=0IvTY6qT72A', 'Darker Side', [], ''],
     // tomshi improve
     ["Tomshi Improve Cap", "https://www.youtube.com/watch?v=5zVnhV8FilU", "Cap", [], ""],
