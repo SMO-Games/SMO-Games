@@ -17,7 +17,7 @@
       1,
       "7kjp3wzk"
     ],
-    "most_recent_run": "2026-04-27",
+    "most_recent_run": "2026-06-22",
     "twitch_handle": "tyron18",
     "twitter_handle": "Tyron18_",
     "profile_picture": "https://www.speedrun.com/static/user/v8l2p52x/image?v=8cca7cf",
@@ -250,6 +250,31 @@
     "console": "Switch 1"
   },
   {
+    "name": "Speed",
+    "id": "v815y1pj",
+    "country": [
+      "us",
+      "United States",
+      "US",
+      "aN"
+    ],
+    "name_colour": "#B8B8B8",
+    "best_mb_placement": [
+      11,
+      "w20w1lzd"
+    ],
+    "best_ce_placement": [
+      12,
+      "7kjp3wzk"
+    ],
+    "most_recent_run": "2026-06-18",
+    "twitch_handle": "SpeedSMO",
+    "twitter_handle": "speed_smo",
+    "profile_picture": "https://www.speedrun.com/static/user/v815y1pj/image?v=4131f9d",
+    "pb": 3413,
+    "console": "Switch 2"
+  },
+  {
     "name": "goryuya",
     "id": "y8d5wdlj",
     "country": [
@@ -260,7 +285,7 @@
     ],
     "name_colour": "#EE4444",
     "best_mb_placement": [
-      11,
+      12,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -322,31 +347,6 @@
     "twitter_handle": null,
     "profile_picture": "https://www.speedrun.com/static/user/18qqoew8/image?v=02fea8e",
     "pb": 3425,
-    "console": "Switch 2"
-  },
-  {
-    "name": "Speed",
-    "id": "v815y1pj",
-    "country": [
-      "us",
-      "United States",
-      "US",
-      "aN"
-    ],
-    "name_colour": "#B8B8B8",
-    "best_mb_placement": [
-      14,
-      "w20w1lzd"
-    ],
-    "best_ce_placement": [
-      12,
-      "7kjp3wzk"
-    ],
-    "most_recent_run": "2026-05-10",
-    "twitch_handle": "SpeedSMO",
-    "twitter_handle": "speed_smo",
-    "profile_picture": "https://www.speedrun.com/static/user/v815y1pj/image?v=4131f9d",
-    "pb": 3428,
     "console": "Switch 2"
   },
   {
@@ -3714,7 +3714,7 @@
       "vdooo3yd"
     ],
     "best_ce_placement": [
-      294,
+      295,
       "7kjp3wzk"
     ],
     "most_recent_run": "2026-02-05",
@@ -3764,7 +3764,7 @@
       "w20w1lzd"
     ],
     "best_ce_placement": [
-      206,
+      207,
       "7kjp3wzk"
     ],
     "most_recent_run": "2026-06-11",
