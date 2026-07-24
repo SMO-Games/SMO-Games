@@ -542,7 +542,7 @@
       1,
       "z2746542"
     ],
-    "most_recent_run": "2026-04-02",
+    "most_recent_run": "2026-04-09",
     "twitch_handle": "proprofk",
     "twitter_handle": null,
     "profile_picture": null,
@@ -589,7 +589,7 @@
       "wdmw4e42"
     ],
     "best_ce_placement": [
-      39,
+      40,
       "7kjp3wzk"
     ],
     "most_recent_run": "2024-05-29",
@@ -650,6 +650,31 @@
     "console": "Switch 2"
   },
   {
+    "name": "Jadyboyy",
+    "id": "j26zg26x",
+    "country": [
+      "jo",
+      "Jordan",
+      "JO",
+      "AS"
+    ],
+    "name_colour": "#44BBEE",
+    "best_mb_placement": [
+      27,
+      "w20w1lzd"
+    ],
+    "best_ce_placement": [
+      1,
+      "wk6v89ed"
+    ],
+    "most_recent_run": "2026-05-30",
+    "twitch_handle": "Jadyboyy",
+    "twitter_handle": "Jadyboyy_SMO",
+    "profile_picture": "https://www.speedrun.com/static/user/j26zg26x/image?v=9911075",
+    "pb": 3462,
+    "console": "Switch 2"
+  },
+  {
     "name": "MrDrPepper1",
     "id": "j5wg12nj",
     "country": [
@@ -660,7 +685,7 @@
     ],
     "name_colour": "#8AC951",
     "best_mb_placement": [
-      27,
+      28,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -685,7 +710,7 @@
     ],
     "name_colour": "#B8B8B8",
     "best_mb_placement": [
-      28,
+      29,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -735,7 +760,7 @@
     ],
     "name_colour": "#6666EE",
     "best_mb_placement": [
-      29,
+      30,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -922,31 +947,6 @@
     "twitter_handle": null,
     "profile_picture": "https://www.speedrun.com/static/user/jo10r67x/image?v=c6b638f",
     "pb": 3488,
-    "console": "Switch 2"
-  },
-  {
-    "name": "Jadyboyy",
-    "id": "j26zg26x",
-    "country": [
-      "jo",
-      "Jordan",
-      "JO",
-      "AS"
-    ],
-    "name_colour": "#44BBEE",
-    "best_mb_placement": [
-      38,
-      "w20w1lzd"
-    ],
-    "best_ce_placement": [
-      1,
-      "wk6v89ed"
-    ],
-    "most_recent_run": "2026-04-15",
-    "twitch_handle": "Jadyboyy",
-    "twitter_handle": "Jadyboyy_SMO",
-    "profile_picture": "https://www.speedrun.com/static/user/j26zg26x/image?v=9911075",
-    "pb": 3493,
     "console": "Switch 2"
   },
   {
@@ -1764,7 +1764,7 @@
       "w20w1lzd"
     ],
     "best_ce_placement": [
-      37,
+      38,
       "7kjp3wzk"
     ],
     "most_recent_run": "2022-09-06",
@@ -1810,7 +1810,7 @@
     ],
     "name_colour": "#44BBEE",
     "best_mb_placement": [
-      45,
+      46,
       "vdooqjod"
     ],
     "best_ce_placement": [
@@ -1840,7 +1840,7 @@
     ],
     "best_ce_placement": [
       4,
-      "02q3xryk"
+      "zd37rjy2"
     ],
     "most_recent_run": "2026-05-31",
     "twitch_handle": "bp3142",
@@ -2164,7 +2164,7 @@
       "vdooo3yd"
     ],
     "best_ce_placement": [
-      12,
+      13,
       "02q3xryk"
     ],
     "most_recent_run": "2025-06-29",
@@ -2464,7 +2464,7 @@
       "w20w1lzd"
     ],
     "best_ce_placement": [
-      17,
+      18,
       "vdomwx62"
     ],
     "most_recent_run": "2022-02-15",
@@ -2535,7 +2535,7 @@
     ],
     "name_colour": "#44BBEE",
     "best_mb_placement": [
-      59,
+      60,
       "vdooqjod"
     ],
     "best_ce_placement": [
@@ -2739,7 +2739,7 @@
       "wdmw4e42"
     ],
     "best_ce_placement": [
-      47,
+      48,
       "7kjp3wzk"
     ],
     "most_recent_run": "2026-06-14",
@@ -3142,7 +3142,7 @@
       1,
       "rklr3lrk"
     ],
-    "most_recent_run": "2026-04-10",
+    "most_recent_run": "2026-06-25",
     "twitch_handle": null,
     "twitter_handle": null,
     "profile_picture": "https://www.speedrun.com/static/user/xyomqevj/image?v=54f9c5f",
@@ -3160,7 +3160,7 @@
     ],
     "name_colour": "#EE4444",
     "best_mb_placement": [
-      53,
+      54,
       "vdooqjod"
     ],
     "best_ce_placement": [
@@ -3264,7 +3264,7 @@
       "w20w1lzd"
     ],
     "best_ce_placement": [
-      39,
+      40,
       "7kjp3wzk"
     ],
     "most_recent_run": "2023-01-01",
@@ -3660,7 +3660,7 @@
     ],
     "name_colour": "#C279E5",
     "best_mb_placement": [
-      76,
+      77,
       "vdooqjod"
     ],
     "best_ce_placement": [
