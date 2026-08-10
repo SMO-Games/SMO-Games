@@ -50,6 +50,7 @@ const trickTutorials = [
     ['Hydrophobia', 'https://www.youtube.com/watch?v=QkaULA6QROE', 'Cap', [], ''],
     ['Frog Vectors', 'https://www.youtube.com/watch?v=LX7aZ2W7laE', 'Cap', [], ''],
     ['Left Side', 'https://www.youtube.com/watch?v=wKO4N5yg5bs', 'Cap', [], ''],
+    ['Goomba Moon', 'https://www.youtube.com/watch?v=AQu7o2drHSQ', 'Cap', [], ''],
     // cascade
     ['Dino Skip', 'https://www.youtube.com/watch?v=-b4Y5CYM9R4', 'Cascade', [], ''],
     ['Madame Broode', 'https://www.youtube.com/watch?v=_2kGJEXch-0', 'Cascade', [], ''],
@@ -116,6 +117,7 @@ const trickTutorials = [
     ['Snow Moon Clip', 'https://www.youtube.com/watch?v=iU6Ol_3eSWw', 'Snow', [], ''],
     ['Box Clip', 'https://www.youtube.com/watch?v=zB-Viw4bCE0', 'Snow', [], ''],
     ['Blowey Noey', 'https://www.youtube.com/watch?v=SVo7L1UFJCQ', 'Snow', [], ''],
+    ['Blowey Noey (Extras)', 'https://www.youtube.com/watch?v=k9NxCqDD2OI', 'Snow', [], ''],
     ['ICC', 'https://www.youtube.com/watch?v=s8DyENm-CX0', 'Snow', [], ''],
     ['Snow Dram (Tomshi)', 'https://www.youtube.com/watch?v=MkFVrMGsWmg', 'Snow', [], ''],
     ['Snow Dram (Smallant)', 'https://www.youtube.com/watch?v=nbw8pUPJklo', 'Snow', [], ''],
@@ -124,20 +126,23 @@ const trickTutorials = [
     ['Fish Dip', 'https://www.youtube.com/watch?v=tzFtFZePT9s', 'Seaside', [], ''],
     ['Mollusque (BP)', 'https://www.youtube.com/watch?v=nmpjF73OxLM', 'Seaside', [], ''],
     ['Volleyball', 'https://www.youtube.com/watch?v=0LxXFpvAYj4', 'Seaside', [], ''],
+    ['Underwater 2D Section', 'https://www.youtube.com/watch?v=BLPhSw1OcCM', 'Seaside', [], ''],
     ['Mollusque (Tomshi)', 'https://www.youtube.com/watch?v=kewk5SgW8UQ', 'Seaside', [], ''],
     // luncheon
     ['Forks Room', 'https://www.youtube.com/watch?v=6ciAo619o44', 'Luncheon', [], ''],
     ['Lava Bubble Jump After Forks', 'https://www.youtube.com/watch?v=PkaSLIGyF40', 'Luncheon', [], ''],
     ['Cheese', 'https://www.youtube.com/watch?v=Gr3POL3kx4Y', 'Luncheon', [], ''],
-    ['Mountain Moon Backup', 'https://www.youtube.com/watch?v=eBsrdVUMsBY', 'Luncheon', [], ''],
     ['Cookatiel', 'https://www.youtube.com/watch?v=wkEc5PgL8JY', 'Luncheon', [], ''],
+    ["Volcano Cave Crusin'", 'https://www.youtube.com/watch?v=xXuo33a-iF0', 'Luncheon', [], ''],
     ['Light the Far Off Lanterns', 'https://www.youtube.com/watch?v=gBDn0VjCPgk', 'Luncheon', [], ''],
+    ['Mountain Moon Backup', 'https://www.youtube.com/watch?v=eBsrdVUMsBY', 'Luncheon', [], ''],
     ['Turnip Clip', 'https://www.youtube.com/watch?v=6Npe8KffTPg', 'Luncheon', [], ''],
     // bowser's
     ['Birdless Mech', 'https://www.youtube.com/watch?v=7-q_lqwOtXs', "Bowser's", [], ''],
     ['Tsar Bomba', 'https://www.youtube.com/watch?v=19srGtDaj0Q', "Bowser's", [], ''],
     ['New TA', 'https://www.youtube.com/watch?v=P9tha2b3LWA', "Bowser's", [], ''],
     ['New Shards', 'https://www.youtube.com/watch?v=oPS-Q5lzT74', "Bowser's", [], ''],
+    ["Bowser's Vault Vector", 'https://www.youtube.com/watch?v=C7LAO3Y-5N0', "Bowser's", [], ''],
     ['Fast Tippi Neo Poke Dram', 'https://www.youtube.com/watch?v=lQq4BeUcODA', "Bowser's", ['Darker', 'AM', '100%'], 'Advanced'],
     ['Pokio Music Notes', 'https://www.youtube.com/watch?v=opUdzQ-_8yI', "Bowser's", [], ''],
     ['Pokio Bomb Snipe', 'https://www.youtube.com/watch?v=855FIgtN84c', "Bowser's", [], ''],
@@ -147,12 +152,12 @@ const trickTutorials = [
     ['2DSS (FT)', 'https://www.youtube.com/watch?v=rrdBo-61Svg', 'Moon', [], ''],
     ['2DSS (Lex)', 'https://www.youtube.com/watch?v=rveuaXyR7u0', 'Moon', [], ''],
     // mushroom
-
+    ['Throwing Seeds', 'https://www.youtube.com/watch?v=8yp7J8F8ke8', 'Mushroom', [], ''],
     // dark
     ['3DSS', 'https://www.youtube.com/watch?v=lJCGhdmkYPQ', 'Dark Side', [], ''],
     ['Dark Side Mech', 'https://www.youtube.com/watch?v=KoT5_zU3Qkc', 'Dark Side', [], ''],
     // darker
-    ['Glydon Skip', 'https://www.youtube.com/watch?v=wGHxiaAhixo', 'Darker Side', [], ''],
+    ['Glydon Skip', 'https://www.youtube.com/watch?v=LSbE0MdehU0', 'Darker Side', [], ''],
     ['Darker FRS', 'https://www.youtube.com/watch?v=0IvTY6qT72A', 'Darker Side', [], ''],
     // tomshi improve
     ["Tomshi Improve Cap", "https://www.youtube.com/watch?v=5zVnhV8FilU", "Cap", [], ""],
