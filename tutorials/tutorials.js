@@ -151,6 +151,7 @@ const trickTutorials = [
     ['2DSS (VGR)', 'https://www.youtube.com/watch?v=VRKlkrRFMh4', 'Moon', [], ''],
     ['2DSS (FT)', 'https://www.youtube.com/watch?v=rrdBo-61Svg', 'Moon', [], ''],
     ['2DSS (Lex)', 'https://www.youtube.com/watch?v=rveuaXyR7u0', 'Moon', [], ''],
+    ['Rolling Rock Moon', 'https://www.youtube.com/watch?v=qw2c3Y9pzhU', 'Moon', [], ''],
     // mushroom
     ['Throwing Seeds', 'https://www.youtube.com/watch?v=8yp7J8F8ke8', 'Mushroom', [], ''],
     // dark
