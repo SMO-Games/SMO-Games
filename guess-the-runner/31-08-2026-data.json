@@ -42,7 +42,7 @@
       1,
       "wdmvl7ed"
     ],
-    "most_recent_run": "2026-07-27",
+    "most_recent_run": "2026-08-03",
     "twitch_handle": null,
     "twitter_handle": null,
     "profile_picture": "https://www.speedrun.com/static/user/8w91nzqj/image?v=d82e5f2",
@@ -310,7 +310,7 @@
     ],
     "name_colour": "#44BBEE",
     "best_mb_placement": [
-      1,
+      2,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -1060,7 +1060,7 @@
     ],
     "name_colour": "#44BBEE",
     "best_mb_placement": [
-      1,
+      2,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -3125,6 +3125,31 @@
     "console": "Switch 1"
   },
   {
+    "name": "Dax_Grant",
+    "id": "8eneddp8",
+    "country": [
+      "us",
+      "United States",
+      "US",
+      "aN"
+    ],
+    "name_colour": "#6666EE",
+    "best_mb_placement": [
+      4,
+      "wdmw4e42"
+    ],
+    "best_ce_placement": [
+      10,
+      "jdz8olgd"
+    ],
+    "most_recent_run": "2026-08-02",
+    "twitch_handle": "Dax+Grant",
+    "twitter_handle": null,
+    "profile_picture": "https://www.speedrun.com/static/user/8eneddp8/image?v=2caa1bf",
+    "pb": 3596,
+    "console": "Switch 2"
+  },
+  {
     "name": "curi",
     "id": "xz7epwej",
     "country": [
@@ -3135,7 +3160,7 @@
     ],
     "name_colour": "#EF8241",
     "best_mb_placement": [
-      126,
+      127,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -3210,7 +3235,7 @@
     ],
     "name_colour": "#A010A0",
     "best_mb_placement": [
-      128,
+      129,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -3273,31 +3298,6 @@
     "profile_picture": "https://www.speedrun.com/static/user/kj94kq7x/image?v=a2d9476",
     "pb": 3600,
     "console": "Switch 1"
-  },
-  {
-    "name": "Dax_Grant",
-    "id": "8eneddp8",
-    "country": [
-      "us",
-      "United States",
-      "US",
-      "aN"
-    ],
-    "name_colour": "#6666EE",
-    "best_mb_placement": [
-      4,
-      "wdmw4e42"
-    ],
-    "best_ce_placement": [
-      10,
-      "jdz8olgd"
-    ],
-    "most_recent_run": "2026-07-03",
-    "twitch_handle": "Dax+Grant",
-    "twitter_handle": null,
-    "profile_picture": "https://www.speedrun.com/static/user/8eneddp8/image?v=2caa1bf",
-    "pb": 3600,
-    "console": "Switch 2"
   },
   {
     "name": "Stealthz",
