@@ -558,7 +558,7 @@
       "AU",
       "OC"
     ],
-    "name_colour": "#09B876",
+    "name_colour": "#44BBEE",
     "best_mb_placement": [
       4,
       "vdooo3yd"
@@ -570,7 +570,7 @@
     "most_recent_run": "2026-01-24",
     "twitch_handle": "GameNerd607",
     "twitter_handle": "607thGameNerd",
-    "profile_picture": "https://www.speedrun.com/static/user/xy5owlz8/image?v=ab1d7e7",
+    "profile_picture": "https://www.speedrun.com/static/user/xy5owlz8/image?v=39e4d9c",
     "pb": 3457,
     "console": "Switch 2"
   },
@@ -2775,6 +2775,31 @@
     "console": "Switch 1"
   },
   {
+    "name": "Maxsterious",
+    "id": "xyomqevj",
+    "country": [
+      "gb",
+      "United Kingdom",
+      "GB",
+      "EU"
+    ],
+    "name_colour": "#A010A0",
+    "best_mb_placement": [
+      14,
+      "vdooo3yd"
+    ],
+    "best_ce_placement": [
+      1,
+      "rklr3lrk"
+    ],
+    "most_recent_run": "2026-07-29",
+    "twitch_handle": null,
+    "twitter_handle": null,
+    "profile_picture": "https://www.speedrun.com/static/user/xyomqevj/image?v=54f9c5f",
+    "pb": 3590,
+    "console": "Switch 1"
+  },
+  {
     "name": "CrunchySpon",
     "id": "xz73e44j",
     "country": [
@@ -2835,7 +2860,7 @@
     ],
     "name_colour": "#44BBEE",
     "best_mb_placement": [
-      113,
+      114,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -2860,7 +2885,7 @@
     ],
     "name_colour": "#249BCE",
     "best_mb_placement": [
-      113,
+      114,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -2910,7 +2935,7 @@
     ],
     "name_colour": "#44BBEE",
     "best_mb_placement": [
-      116,
+      117,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -2985,7 +3010,7 @@
     ],
     "name_colour": "#A010A0",
     "best_mb_placement": [
-      120,
+      121,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -3185,7 +3210,7 @@
     ],
     "name_colour": "#EF8241",
     "best_mb_placement": [
-      128,
+      129,
       "w20w1lzd"
     ],
     "best_ce_placement": [
@@ -3196,31 +3221,6 @@
     "twitch_handle": null,
     "twitter_handle": null,
     "profile_picture": "https://www.speedrun.com/static/user/xz7epwej/image?v=4253c3f",
-    "pb": 3598,
-    "console": "Switch 1"
-  },
-  {
-    "name": "Maxsterious",
-    "id": "xyomqevj",
-    "country": [
-      "gb",
-      "United Kingdom",
-      "GB",
-      "EU"
-    ],
-    "name_colour": "#A010A0",
-    "best_mb_placement": [
-      14,
-      "vdooo3yd"
-    ],
-    "best_ce_placement": [
-      1,
-      "rklr3lrk"
-    ],
-    "most_recent_run": "2026-07-15",
-    "twitch_handle": null,
-    "twitter_handle": null,
-    "profile_picture": "https://www.speedrun.com/static/user/xyomqevj/image?v=54f9c5f",
     "pb": 3598,
     "console": "Switch 1"
   },
